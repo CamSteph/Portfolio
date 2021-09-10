@@ -1567,6 +1567,9 @@ body {
     width: 19vw;
     min-width: 100px;
   }
+  .container .project-card-section {
+    min-height: 230vh;
+  }
   .container .resume-section .key-skills-section {
     margin-top: 10%;
   }
@@ -1594,4 +1597,3 @@ body {
     color: #16181a;
   }
 }
-/*# sourceMappingURL=style.css.map */
