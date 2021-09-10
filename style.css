@@ -11,10 +11,13 @@
 
     .safari_only { 
 
-        color:#0000FF; 
-        background-color:#CCCCCC; 
+        
 
     }
+  
+  .container .footer-section .contact-section form .textarea-wrap button{
+    background-color: red;
+  }
 }}
 
 body {
@@ -579,7 +582,7 @@ body {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  /* -ms-grid-columns: (1fr)[3]; */
+  -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 5%;
   -webkit-box-align: center;
@@ -716,7 +719,7 @@ body {
 .container .resume-section .key-skills-section .key-skills {
   display: -ms-grid;
   display: grid;
-  /* -ms-grid-columns: (1fr)[7]; */
+  -ms-grid-columns: (1fr)[7];
       grid-template-columns: repeat(7, 1fr);
   -ms-flex-line-pack: center;
       align-content: center;
@@ -1022,7 +1025,7 @@ body {
     width: 90%;
     display: -ms-grid;
     display: grid;
-    /* -ms-grid-columns: (1fr)[2]; */
+    -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: auto;
         grid-template-rows: auto;
@@ -1097,7 +1100,7 @@ body {
   .container .resume-section .key-skills-section .key-skills {
     display: -ms-grid;
     display: grid;
-    /* -ms-grid-columns: (1fr)[4]; */
+    -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
     -ms-grid-rows: auto;
         grid-template-rows: auto;
@@ -1581,7 +1584,7 @@ body {
   .container .resume-section .key-skills-section .key-skills {
     display: -ms-grid;
     display: grid;
-    /* -ms-grid-columns: (1fr)[2]; */
+    -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: auto;
         grid-template-rows: auto;
@@ -1593,6 +1596,10 @@ body {
   }
   .container .footer-section .contact-section {
     background: #906ee0;
+  }
+  
+  .container .footer-section .contact-section form .textarea-wrap button{
+    background-color: red;
   }
 }
 /*# sourceMappingURL=style.css.map */
