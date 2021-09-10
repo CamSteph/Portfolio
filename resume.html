@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cameron's Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <script defer src="resume.js"></script>
+</head>
+<body>
+    <div class="container" data-container>
+        <div class="overlay-section" data-overlay-section>
+            <ion-icon name="close-sharp" data-close-overlay></ion-icon>
+            <div class="overlay-list" data-dropdown-list>
+                <a href="index.html" class="overlay-link">Home</a>
+                <a href="projects.html" class="overlay-link">Projects</a>
+                <a href="resume.html" class="dropdown-link">Resume</a>
+                <div class="dark-mode-wrap" data-mode-wrap2>
+                    <ion-icon name="moon-outline" data-dark-mode2>Dark</ion-icon>
+                </div>
+            </div>
+        </div>
+        <!-- header section -->
+        <header class="header-section">
+            <div class="logo-section">
+                <img src="profile.png" alt="Logo">
+                <h2 class="logo-title">Cameron's Portfolio</h2>
+            </div>
+            <nav class="nav-section">
+                <ul class="nav-ul">
+                    <li class="nav-li"><a href="index.html" data-home>Home</a></li>
+                    <li class="nav-li"><a href="projects.html" data-project>Projects</a></li>
+                    <li class="nav-li"><a href="resume.html" data-resume>Resume</a></li>
+                    <li class="nav-li">
+                        <div class="dark-mode-wrap" data-mode-wrap>
+                            <ion-icon name="moon-outline" data-dark-mode></ion-icon>
+                            Dark
+                        </div>
+                    </li>
+                </ul>
+                <div class="dropdown-section">
+                    <ion-icon name="grid-outline" data-dropdown-btn></ion-icon>
+                    <div class="dropdown-list" data-dropdown-list>
+                        <a href="index.html" class="dropdown-link">Home</a>
+                        <a href="projects.html" class="dropdown-link">Projects</a>
+                        <a href="resume.html" class="dropdown-link">Resume</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    
+        <!-- resume section -->
+        <!-- <a href="./directory/yourfile.pdf" download="newfilename">Download the pdf</a> -->
+        <main class="resume-section">
+            <h1 class="resume-title">Resume</h1>
+            <!-- skills -->
+                <div class="key-skills-section">
+                    <h3 class="key-skills-title">Key Skills:</h3>
+                    <div class="key-skills">
+                        <div class="skill">
+                            <ion-icon name="logo-html5"></ion-icon>
+                            <p class="skill-name">HTML5</p>
+                        </div>
+                        <div class="skill">
+                            <ion-icon name="logo-css3"></ion-icon>
+                            <p class="skill-name">CSS3</p>
+                        </div>
+                        <div class="skill">
+                            <ion-icon name="logo-javascript"></ion-icon>
+                            <p class="skill-name">JavaScript</p>
+                        </div>
+                        <div class="skill">
+                            <ion-icon name="logo-sass"></ion-icon>
+                            <p class="skill-name">SASS</p>
+                        </div>
+                        <div class="skill">
+                            <ion-icon name="logo-react"></ion-icon>
+                            <p class="skill-name">React</p>
+                        </div>
+                        <div class="skill">
+                            <ion-icon name="logo-wordpress"></ion-icon>
+                            <p class="skill-name">WordPress</p>
+                        </div>
+                        <div class="skill">
+                            <ion-icon name="logo-npm"></ion-icon>
+                            <p class="skill-name">NPM</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- work experience -->
+                <div class="work-experience-section">
+                    <h3 class="work-experience-title">Work Experience:</h3>
+                    <div class="experience-wrap">
+                        <div class="experience">
+                            <h3 class="experience-role">Technical Hosting Support - GoDaddy </h3>
+                            <h7 class="experience-date">February 8th, 2021 - Present</h7>
+                            <div class="resp-wrap">
+                                <ul class="resp-ul">
+                                    <li class="resp-li">Evaluated code to ensure that it is valid, is properly structured, meets industry standards and is cross-browser compatible.</li>
+                                    <li class="resp-li">Collaborated with team members to help troubleshoot website issues and errors.</li>
+                                    <li class="resp-li"> Completed WordPress error debugging and customizations.</li>
+                                    <li class="resp-li">Domain and DNS management.</li>
+                                    <li class="resp-li">Performed SSL installations, management, and rekeys.</li>
+                                    <li class="resp-li">Diagnosed and mititgated client's latency issues on their web sites.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="experience">
+                            <h3 class="experience-role">Front End Developer - Key Banks </h3>
+                            <h7 class="experience-date">January 15th, 2020 - January 23rd, 2021</h7>
+                            <div class="resp-wrap">
+                                <ul class="resp-ul">
+                                    <li class="resp-li">Consulted with clients regarding software system design requirements and maintenance.</li>
+                                    <li class="resp-li">Coordianted software installations and monitored equipment functioning to ensure specifications were met.</li>
+                                    <li class="resp-li">Determined system performance standards.</li>
+                                    <li class="resp-li">Trained existing employees on new or modified software.</li>
+                                    <li class="resp-li">Developed and directed software system testing testing and valiation procedures, programming, and documentation.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="experience">
+                            <h3 class="experience-role">Freelance WordPress Designer - Self-Employeed </h3>
+                            <h7 class="experience-date">March 6th, 2020 - December 28th, 2020</h7>
+                            <div class="resp-wrap">
+                                <ul class="resp-ul">
+                                    <li class="resp-li">Performed or directed website updates and modifications.</li>
+                                    <li class="resp-li">Designed, built, and maintained websits using scripting languages, content creation tools, management/admin tools, and digital media.</li>
+                                    <li class="resp-li"> Completed WordPress error debugging and customizations.</li>
+                                    <li class="resp-li">Backed up files from websites to local directories using FTP for instant recovery purposes.</li>
+                                    <li class="resp-li">Evaluated code to ensure that it is valid, is properly strucured, error-free, and cross-browser compatible.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- education section -->
+                <div class="education-section">
+                    <h3 class="education-title">Education:</h3>
+                    <div class="education-wrap">
+                        <div class="education">
+                            <h3 class="school-name">Atlanta Technical College</h3>
+                            <h4 class="degree">Computer Information Systems</h4>
+                            <h5 class="attendance">August 2018 - Present</h5>
+                            <p class="gpa">GPA: 3.54 out of 4.00</p>
+                        </div>
+                        <div class="education">
+                            <h3 class="school-name">Miller Grove High School</h3>
+                            <h4 class="degree">High school diploma</h4>
+                            <h5 class="attendance">August 2013 - May 2017</h5>
+                            <p class="gpa">GPA: 3.33 out of 4.00</p>
+                        </div>
+                    </div>
+                </div>
+        </main>
+    
+        <!-- footer section -->
+        <footer class="footer-section">
+            <div class="contact-section">
+                <h3 class="contact-title">Contact Me!</h3>
+                <form action="https://formspree.io/f/mdoyyjbv" method="POST">
+                    <div class="name-email-wrap">
+                        <label for="full-name">Full Name:
+                            <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+                        </label>
+                        <label>
+                            Your email:
+                            <input type="email" name="_replyto" placeholder="Email">
+                        </label>
+                    </div>
+                    <div class="textarea-wrap">
+                        <label>
+                            Message:
+                            <textarea name="message" placeholder="Type your message here..."></textarea>
+                        </label>
+                        <button type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+            <div class="footer-wrap">
+                <div class="footer-left">
+                    <p class="footer-title">Cameron's Portfolio &copy;</p>
+                </div>
+                <div class="right-side">
+                    <p class="powered-by-msg">Powered by: HTML, CSS, & JavaScript</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- icon scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

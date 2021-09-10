@@ -1,0 +1,1058 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200&display=swap');
+
+// variables
+$primary-bg-color: rgb(238, 245, 248);
+$secondary-bg-color: rgb(134, 90, 236);
+$primary-font-family: 'IBM Plex Sans Arabic', sans-serif;
+$primary-font-color: rgb(22, 24, 26);
+$secondary-font-color: salmon;
+
+// functions
+@mixin font($style: normal, $weight: 100, $size: 1.1rem, $line_height: 1, $family: sans-serif, $color: $primary-font-color){
+    font-style: $style;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line_height;
+    font-family: $family;
+    color: $color;
+}
+
+@mixin displayFlex($display, $flex_direction, $align_items, $justify_content){
+    display: $display;
+    flex-direction: $flex_direction;
+    align-items: $align_items;
+    justify-content: $justify_content;
+}
+
+@mixin padding($top, $right, $bottom, $left){
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+}
+
+@mixin margin($top, $right, $bottom, $left){
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+}
+// styling
+
+*, *::before, *after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background-color: $primary-bg-color;
+    position: relative;
+}
+
+.container{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: $primary-bg-color;
+    position: relative;
+    @include font(normal, 100, 1.1rem, 1, $primary-font-family, $primary-font-color);
+    z-index: 0;
+    
+    .overlay-section{
+        height: 100vh;
+        width: 100%;
+        // padding-top: 10vh;
+        position: sticky;
+        background-color: rgba(255, 255, 255, .93);
+        top: 0;
+        left: 0;
+        z-index: 50;
+        @include displayFlex(flex, column, center, center);
+        display: none;
+
+        ion-icon{
+            text-align: center;
+            font-size: 6vh;
+            cursor: pointer;
+            transition: all .4s ease-in;
+            &:hover{
+                transform: rotate(90deg);
+            }
+        }
+
+        div{
+            height: 50vh;
+            width: 100%;
+            @include displayFlex(flex, column, center, space-between);
+
+            a{
+                font-size: 3vh;
+                font-weight: 900;
+                text-decoration: none;
+                color: $primary-font-color;
+                transition: all .25s ease-in;
+                letter-spacing: 1.7vw;
+                width: 80%;
+                text-align: center;
+                margin-bottom: 8%;
+                &:hover{
+                    transform: scale(1.03);
+                    background-color: rgba(211, 219, 224, .6);
+                }
+                &:first-child{
+                    margin-top: 7%;
+                }
+            }
+        }
+    }
+
+    // *** HEADER SECTION ***
+    .header-section{
+        @include displayFlex(flex, row, center, space-between);
+        width: 100%;
+        min-height: 16vh;
+        max-height: 9rem;
+        @include padding(.4%, 0%, .4%, 0%);
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background-color: $primary-bg-color;
+        box-shadow: 0px 0px 30px 0px rgb(129, 148, 170);
+
+        // LOGO SECTION
+        .logo-section{
+            margin: 0;
+            width: 40%;
+            background-color: rgb(134, 90, 236);
+            background: linear-gradient(to bottom right,rgb(143, 236, 236), rgb(68, 214, 214), rgb(162, 123, 253), rgb(120, 83, 207));
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            color: $primary-bg-color;
+            @include padding(.4%, 0%, .4%, 0%);
+            @include displayFlex(flex, row, center, space-evenly);
+            left: 0;
+
+            // IMG
+            img{
+                height: 12vh;
+                max-height: 6.5rem;
+            }
+        }
+
+        // NAV SECTION
+        .nav-section{
+            width: 56%;
+            z-index: 10;
+
+
+            // NAV UL SECTION
+            .nav-ul{
+                @include displayFlex(flex, row, center, space-evenly);
+                z-index: 10;
+
+                ion-icon{
+                    font-size: 3vw;
+                }
+
+                // LI ELEMENTS
+                li{
+                    list-style: none;
+                    cursor: pointer;
+                    transition: all .2s ease-in;
+                    font-weight: 900;
+                    &:hover{
+                        transform: scale(1.05);
+                        color: $secondary-font-color;
+                    }
+
+                    // A ELEMENTS
+                    a{
+                        text-decoration: none;
+                        color: $primary-font-color;
+                        &:hover{
+                            transform: scale(1.05);
+                            color: $secondary-font-color;
+                        }
+                    }
+
+                    .dark-mode-wrap{
+                        @include displayFlex(flew, column, center, center);
+                    }
+                }
+            }
+
+            // DROPDOWN SECTION
+            .dropdown-section{
+                display: none;
+            }
+        }
+    }
+
+    // *** MAIN SECTION ***
+    .main-section{
+        min-height: 90vh;
+        width: 100%;
+        z-index: 0;
+        @include displayFlex(flex, row, center, space-between);
+        @include padding(0%, 0%, 5%, 0%);
+
+        .left-side{
+            width: 50%;
+            line-height: 2;
+            @include padding(0%, 5%, 0%, 10%);
+
+            h2{
+                color: $secondary-font-color;
+                letter-spacing: .3vw;
+            }
+
+            p{
+                text-align: left;
+                text-indent: 9%;
+                font-weight: 900;
+                // &::first-letter{
+                //     font-size: 3vh;
+                // }
+            }
+
+            // BTN SECTION
+            .btn-wrap-section{
+                @include displayFlex(flex, row, center, flex-start);
+                a{
+                    text-align: center;
+                    min-height: 2rem;
+                    min-width: 10vw;
+                    border-radius: 4px;
+                    padding: 0% 3% 0% 3%;
+                    text-decoration: none;
+                    transition: all .2s ease-in;
+                    &:hover{
+                        transform: scale(1.05);
+                    }
+                }
+
+                .project-btn{
+                    background-color: rgba(134, 90, 236, 0);
+                    border: 2px solid rgb(134, 90, 236);
+                    color: rgb(134, 90, 236);
+                    font-weight: 900;
+                    margin-right: 3%;
+                    @include displayFlex(flex, column, center, center);
+                }
+
+                .resume-btn{
+                    background-color: rgba(134, 90, 236, 1);
+                    font-weight: 900;
+                    min-height: 2.4rem;
+                    @include displayFlex(flex, column, center, center);
+                    color: $primary-bg-color;
+                }
+            }
+        }
+
+        .right-side{
+            width: 50%;
+            @include padding(0%, 8%, 0%, 2%);
+
+            .right-side-img{
+                height: 40vw;
+                min-height: 7rem;
+                filter: hue-rotate(30deg);
+            }
+        }
+
+    }
+
+    .footer-section{
+        background-color: $primary-bg-color;
+        box-shadow: -18px 0px 9px -2px rgb(35, 67, 97);
+        min-height: 10vh;
+        @include displayFlex(flex, column, center, space-between);
+        font-weight: 900;
+
+        .footer-wrap{
+            width: 90%;
+            @include displayFlex(flex, row, center, space-between);
+        }
+
+        .contact-section{
+            min-height: 35vh;
+            width: 100%;
+            padding-bottom: 3%;
+            @include displayFlex(flex, column, center, space-around);
+            background: linear-gradient(to bottom right, rgb(69, 45, 124), rgb(144, 110, 224));
+
+            form{
+                height: 90%;
+                width: 81%;
+                // background-color: blue;
+                @include displayFlex(flex, row, flex-start, space-evenly);
+                text-align: left;
+
+                input{
+                    width: 20vw;
+                    height: 4vh;
+                    border-radius: 5px;
+                    border: none;
+                    outline: none;
+                    margin-top: 2%;
+                    margin-bottom: 7%;
+                    padding: 1.5%;
+                    font-size: medium;
+                    min-width: 12rem;
+                    background-color: rgba(255, 255, 255, 0.582);
+                }
+                label{
+                    margin-bottom: 2.5%;
+                    color: white;
+                }
+
+                textarea{
+                    margin-top: 2%;
+                    border-radius: 5px;
+                    width: 35vw;
+                    min-width: 10rem;
+                    height: 15vh;
+                    border: none;
+                    outline: none;
+                    padding: 1.5%;
+                    font-size: medium;
+                    font-family: $primary-font-family;
+                    font-weight: 900;
+                    background-color: rgba(255, 255, 255, 0.582);
+                }
+
+                button{
+                    width: 12vw;
+                    height: 5vh;
+                    cursor: pointer;
+                    border: none;
+                    border-radius: 4px;
+                    transition: all .3s ease-in;
+                    &:hover{
+                        transform: scale(.95);
+                        background-color: rgba(230, 230, 230, 0.582);
+                    }
+                }
+
+                .name-email-wrap{
+                    @include displayFlex(flex, column, center, center);
+                    label{
+                        margin-bottom: 2.5%;
+                        input{
+                            margin-top: 4%;
+                        }
+                    }
+                }
+
+                .textarea-wrap{
+                    @include displayFlex(flex, column, flex-start, space-around);
+                }
+            }
+
+            h3{
+                color: white;
+                font-weight: 900;
+                font-size: 5vh;
+            }
+        }
+    }
+
+    // ******* PROJECT PAGE STYLING ********
+
+    .project-card-section{
+        width: 100%;
+        min-height: 100vh;
+        padding-top: 3%;
+        margin-bottom: 6%;
+        // padding-left: 5%;
+        .project-card-title{
+            text-align: center;
+            margin-bottom: 5%;
+            color: salmon;
+            letter-spacing: .45vw;
+        }
+
+        .cards-section{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            // grid-gap: 5%;
+            grid-row-gap: 5%;
+            align-items: center;
+            justify-items: center;
+
+            .card{
+                background-color: $primary-bg-color;
+                width: 27vw;
+                @include displayFlex(flex, column, center, space-around);
+                @include padding(0%, 3%, 3%, 3%);
+                text-align: center;
+                border-radius: 8px;
+                transition: all .45s ease-in;
+                font-weight: 900;
+
+                p{
+                    line-height: 1.3;
+                }
+                &:hover{
+                    box-shadow: 0px 0px 26px -5px rgb(63, 83, 105);
+                }
+
+                ion-icon{
+                    font-size: 9vw;
+                    color: grey;
+                }
+
+                .card-btn-wrap{
+                    width: 100%;
+                    @include displayFlex(flex, row, center, space-evenly);
+                    button{
+                        height: 5vh;
+                        width: 10vw;
+                        min-width: 6rem;
+                        border: none;
+                        background-color: $secondary-bg-color;
+                        border-radius: 4px;
+                        color: $primary-bg-color;
+                        cursor: pointer;
+                        transition: all .12s ease-in;
+                        &:hover{
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // RESUME PAGE STYLING - DEFAULT
+    .resume-section{
+        min-height: 100vh;
+        width: 100%;
+        padding-top: 5%;
+        @include displayFlex(flex, column, center, space-evenly);
+        .resume-title{
+            text-align: center;
+            margin-bottom: 6%;
+            color: salmon;
+            letter-spacing: .8vw;
+        }
+
+        .key-skills-section{
+            width: 100%;
+            height: 30vh;
+            text-align: center;
+            @include displayFlex(flex, column, center, space-around);
+            
+            .key-skills-title{
+                text-decoration: underline;
+                padding-top: 3%;
+                padding-bottom: 1%;
+            }
+
+
+            .key-skills{
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                align-content: center;
+                justify-items: center;
+                place-items: center;
+                width: 85%;
+
+                .skill{
+
+                    ion-icon{
+                        font-size: calc(6.5vw);
+                        color: $primary-font-color;
+                    }
+
+                    p{
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+
+        .work-experience-section{
+
+            .work-experience-title{
+                padding: 8% 0% 4% 0%;
+                text-align: center;
+                text-decoration: underline;
+            }
+
+            .experience-wrap{
+
+                .experience{
+                    border-bottom: 1px solid darkgray;
+                    margin: 0% 5% 0% 5%;
+                    font-weight: 900;
+
+                    .experience-role{
+                        color: salmon;
+                    }
+
+                    .resp-wrap{
+
+                        .resp-ul{
+
+                            .resp-li{
+                                line-height: 5vh;
+                                list-style: square;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .education-section{
+            width: 80vw;
+            padding-bottom: 3%;
+            .education-title{
+                text-align: center;
+                text-decoration: underline;
+                margin-top: 7%;
+            }
+
+            .education-wrap{
+                @include displayFlex(flex, row, center, space-evenly);
+
+                .education{
+                    text-align: left;
+                    h3{
+                        font-weight: 900;
+                        color: salmon;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .container{
+
+        .overlay-section{
+            display: none;
+        }
+
+        .project-card-section{
+            min-height: 100vh;
+        }
+    }
+}
+@media screen and (max-width: 1224px) {
+    .container{
+
+        .overlay-section{
+            display: none;
+        }
+        
+        .header-section{
+
+            .logo-section{
+                font-size: .8rem;
+            }
+        }
+
+        .project-card-section{
+            min-height: 100vh;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container{
+        
+        .header-section{
+            width: 100%;
+            padding: 0;
+            @include displayFlex(flex, row, center, space-between);
+
+            .logo-section{
+                font-size: .8rem;
+                width: 166%;
+            }
+            .nav-section{
+                @include displayFlex(flex, row, center, space-between);
+                padding: 0;
+                .nav-ul{
+                    display: none;
+                }
+
+                .dropdown-section{
+                    width: 14%;
+                    @include displayFlex(flex, row, center, center);
+                    display: inline;
+                    margin-left: 22%;
+
+                    ion-icon{
+                        color: $primary-font-color;
+                        font-size: 3rem;
+                        cursor: pointer;
+                    }
+
+                    .dropdown-list{
+                        background-color: rgba(238, 245, 248, .7);
+                        @include displayFlex(flex, column, flex-start, space-evenly);
+                        z-index: 20;
+                        position: absolute;
+                        top: 20;
+                        left: 0;
+                        height: 40vh;
+                        width: 40vw;
+                        border-radius: 9px;
+                        box-shadow: 8px 8px 32px 0px rgb(73, 108, 131);
+                        display: none;
+
+                        a{
+                            text-decoration: none;
+                            color: $primary-font-color;
+                            font-weight: 900;
+                            width: 20vw;
+                            min-width: 100px;
+                            padding-left: 5%;
+                            padding-top: 16.5%;
+                            padding-bottom: 16.5%;
+                            border-bottom: 1px solid darkgray;
+                            transition: all .13s ease-in;
+                            &:hover{
+                                background-color: rgb(213, 224, 231);
+                                text-decoration: underline;
+                                width: 19vw;
+                                min-width: 100px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .main-section{
+            @include displayFlex(flex, column-reverse, center, space-around);
+            
+            .left-side{
+                text-align: center;
+                width: 80%;
+                @include padding(0%, 2%, 0%, 2%);
+                @include displayFlex(flex, column, center, center);
+
+                .btn-wrap-section{
+                    height: 20vh;
+                    @include displayFlex(flex, column, center, space-around);
+
+                    a{
+                        width: 33vw;
+                    }
+                }
+            }
+
+            .right-side{
+                padding: 0;
+                @include displayFlex(flex, column-reverse, center, center);
+                width: 90%;
+            }
+        }
+
+        .footer-section{
+            @include displayFlex(flex, column, center, center);
+            font-weight: 900;
+
+            div{
+                min-height: 6vh;
+            }
+        }
+        // ******* PROJECT PAGE STYLING ********
+
+        .project-card-section{
+            width: 100%;
+            min-height: 105vh;
+            // background-color: red;
+            .project-card-title{
+                color: salmon;
+                text-align: center;
+            }
+
+            .cards-section{
+                width: 90%;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+                grid-gap: 2%;
+                @include padding(0%, 5%, 0%, 5%);
+
+                .card{
+                    background-color: $primary-bg-color;
+                    width: 80%;
+                    @include displayFlex(flex, column, center, space-around);
+                    @include padding(0%, 3%, 0%, 3%);
+                    text-align: center;
+                    border-radius: 8px;
+                    transition: all .18s ease-in;
+                    cursor: pointer;
+                    padding-bottom: 2%;
+                    &:hover{
+                        box-shadow: 0px 0px 26px -5px rgb(63, 83, 105);
+                    }
+
+                    .card-description{
+                        font-weight: 900;
+                    }
+
+                    ion-icon{
+                        font-size: 9vw;
+                        color: grey;
+                    }
+                }
+            }
+        }
+
+        .resume-section{
+            .education-section{
+    
+                .education-wrap{
+                    @include displayFlex(flex, column, center, space-evenly);
+        
+                    .education{
+                        text-align: left;
+                        h3{
+                            font-weight: 900;
+                            color: salmon;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container{
+
+        .resume-section{
+
+            .key-skills-section{
+
+                .key-skills{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: auto;
+                align-content: center;
+                justify-items: center;
+                place-items: center;
+                width: 85%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container{
+        
+        .header-section{
+            width: 100%;
+            padding: 0;
+            @include displayFlex(flex, row, center, space-between);
+
+            .logo-section{
+                font-size: .8rem;
+                width: 86%;
+            }
+            .nav-section{
+
+                @include displayFlex(flex, row, center, space-between);
+                padding: 0;
+                .nav-ul{
+                    display: none;
+                }
+
+                .dropdown-section{
+                    width: 14%;
+                    @include displayFlex(flex, row, center, center);
+                    display: inline;
+                    margin-left: 22%;
+
+                    ion-icon{
+                        color: $primary-font-color;
+                        font-size: 3rem;
+                        cursor: pointer;
+                    }
+
+                    .dropdown-list{
+                        // width: 20%;
+                        background-color: rgba(238, 245, 248, .7);
+                        @include displayFlex(flex, column, flex-start, space-evenly);
+                        z-index: 20;
+                        position: absolute;
+                        top: 20;
+                        left: 0;
+                        height: 40vh;
+                        width: 40vw;
+                        border-radius: 9px;
+                        box-shadow: 8px 8px 32px 0px rgb(73, 108, 131);
+                        display: none;
+
+                        a{
+                            text-decoration: none;
+                            color: $primary-font-color;
+                            font-weight: 900;
+                            width: 20vw;
+                            min-width: 100px;
+                            padding-left: 5%;
+                            padding-top: 16.5%;
+                            padding-bottom: 16.5%;
+                            border-bottom: 1px solid darkgray;
+                            transition: all .13s ease-in;
+                            &:hover{
+                                background-color: rgb(213, 224, 231);
+                                text-decoration: underline;
+                                width: 19vw;
+                                min-width: 100px;
+                                // border-radius: 9px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .main-section{
+            @include displayFlex(flex, column-reverse, center, space-around);
+            
+            .left-side{
+                text-align: center;
+                width: 80%;
+                @include padding(0%, 2%, 0%, 2%);
+                @include displayFlex(flex, column, center, center);
+
+                .btn-wrap-section{
+                    height: 20vh;
+                    @include displayFlex(flex, column, center, space-around);
+
+                    a{
+                        width: 33vw;
+                    }
+                }
+            }
+
+            .right-side{
+                padding: 0;
+                @include displayFlex(flex, column-reverse, center, center);
+                width: 90%;
+            }
+        }
+
+        .footer-section{
+            @include displayFlex(flex, column, center, center);
+            font-weight: 900;
+
+            .footer-wrap{
+                width: 90%;
+                @include displayFlex(flex, column, center, space-between);
+            }
+
+            div{
+                min-height: 6vh;
+            }
+
+            .contact-section{
+                min-height: 35vh;
+                color: $primary-font-color;
+                width: 100%;
+                padding-bottom: 3%;
+                @include displayFlex(flex, column, center, space-around);
+                background: linear-gradient(to bottom right, rgb(69, 45, 124), rgb(144, 110, 224));
+    
+                form{
+                    height: 90%;
+                    width: 71%;
+                    @include displayFlex(flex, column, flex-start, space-evenly);
+                    text-align: left;
+
+                    button{
+                        width: 30vw;
+                        height: 4vh;
+                    }
+
+                    textarea{
+                        width: 65vw;
+                    }
+                }
+
+                h3{
+                    font-size: xx-large;
+                }
+            }
+        }
+        // ******* PROJECT PAGE STYLING ********
+
+        .project-card-section{
+            width: 100%;
+            min-height: 185vh;
+            .project-card-title{
+                color: salmon;
+                text-align: center;
+            }
+
+            .cards-section{
+                width: 90%;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                grid-gap: 2%;
+                @include padding(0%, 5%, 0%, 5%);
+
+                .card{
+                    background-color: $primary-bg-color;
+                    width: 80%;
+                    @include displayFlex(flex, column, center, space-around);
+                    @include padding(0%, 3%, 0%, 3%);
+                    text-align: center;
+                    border-radius: 8px;
+                    transition: all .18s ease-in;
+                    cursor: pointer;
+                    &:hover{
+                        box-shadow: 0px 0px 26px -5px rgb(63, 83, 105);
+                    }
+
+                    .card-description{
+                        font-weight: 900;
+                    }
+
+                    ion-icon{
+                        font-size: 9vw;
+                        color: grey;
+                    }
+
+                    .card-btn-wrap{
+                        width: 70%;
+                        height: 12vh;
+                        @include displayFlex(flex, column, center, space-around);
+                        button{
+                            height: 5vh;
+                            width: 8vw;
+                            min-width: 10rem;
+                            border: none;
+                            background-color: $secondary-bg-color;
+                            border-radius: 4px;
+                            color: $primary-bg-color;
+                            cursor: pointer;
+                            transition: all .12s ease-in;
+                            &:hover{
+                                transform: scale(1.05);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 465px) {
+    .container{
+        width: 100vw;
+        .header-section{
+            width: 100%;
+            padding: 0;
+            @include displayFlex(flex, row, center, space-between);
+
+            .logo-section{
+                font-size: .8rem;
+                width: 86%;
+
+                h2{
+                    display: none;
+                }
+            }
+            .nav-section{
+                @include displayFlex(flex, row, center, space-between);
+                padding: 0;
+                .nav-ul{
+                    display: none;
+                }
+
+                .dropdown-section{
+                    width: 14%;
+                    @include displayFlex(flex, row, center, center);
+                    display: inline;
+                    margin-left: 22%;
+
+                    ion-icon{
+                        color: $primary-font-color;
+                        font-size: 3rem;
+                        cursor: pointer;
+                    }
+
+                    .dropdown-list{
+                        background-color: rgba(238, 245, 248, .7);
+                        @include displayFlex(flex, column, flex-start, space-evenly);
+                        z-index: 20;
+                        position: absolute;
+                        top: 20;
+                        left: 0;
+                        height: 40vh;
+                        width: 40vw;
+                        border-radius: 9px;
+                        box-shadow: 8px 8px 32px 0px rgb(73, 108, 131);
+                        display: none;
+
+                        a{
+                            text-decoration: none;
+                            color: $primary-font-color;
+                            font-weight: 900;
+                            width: 20vw;
+                            min-width: 100px;
+                            padding-left: 5%;
+                            padding-top: 16.5%;
+                            padding-bottom: 16.5%;
+                            border-bottom: 1px solid darkgray;
+                            transition: all .13s ease-in;
+                            &:hover{
+                                background-color: rgb(213, 224, 231);
+                                text-decoration: underline;
+                                width: 19vw;
+                                min-width: 100px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .resume-section{
+
+            .key-skills-section{
+
+                .key-skills{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+                align-content: center;
+                justify-items: center;
+                place-items: center;
+                width: 85%;
+                }
+            }
+        }
+
+        .footer-section{
+            
+            .contact-section{
+                background: rgb(144, 110, 224);
+            }
+        }
+    }
+}

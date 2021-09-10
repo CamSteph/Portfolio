@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cameron's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div class="container" data-container>
+        <div class="overlay-section" data-overlay-section>
+            <ion-icon name="close-sharp" data-close-overlay></ion-icon>
+            <div class="overlay-list" data-dropdown-list>
+                <a href="index.html" class="overlay-link">Home</a>
+                <a href="projects.html" class="overlay-link">Projects</a>
+                <a href="resume.html" class="dropdown-link">Resume</a>
+                <div class="dark-mode-wrap" data-mode-wrap2>
+                    <ion-icon name="moon-outline" data-dark-mode2>Dark</ion-icon>
+                </div>
+            </div>
+        </div>
+        <!-- header section -->
+        <header class="header-section">
+            <div class="logo-section">
+                <img src="profile.png" alt="Logo">
+                <h2 class="logo-title">Cameron's Portfolio</h2>
+            </div>
+            <nav class="nav-section">
+                <ul class="nav-ul">
+                    <li class="nav-li"><a href="index.html">Home</a></li>
+                    <li class="nav-li"><a href="projects.html">Projects</a></li>
+                    <li class="nav-li"><a href="resume.html">Resume</a></li>
+                    <li class="nav-li">
+                        <div class="dark-mode-wrap" data-mode-wrap>
+                            <ion-icon name="moon-outline" data-dark-mode></ion-icon>
+                            Dark
+                        </div>
+                    </li>
+                </ul>
+                <div class="dropdown-section">
+                    <ion-icon name="grid-outline" data-dropdown-btn></ion-icon>
+                    <div class="dropdown-list" data-dropdown-list>
+                        <a href="index.html" class="dropdown-link">Home</a>
+                        <a href="projects.html" class="dropdown-link">Projects</a>
+                        <a href="resume.html" class="dropdown-link">Resume</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    
+        <!-- main section -->
+        <main class="main-section">
+            <div class="left-side">
+                <h2 class="left-side-title">Greetings, visitor!</h2>
+                <p class="left-side-message">
+                    My name is <u>Cameron Stephenson</u>. I am a hard-working 22-year-old web developer with a degree in Computer Information Systems. I have 3 years of relative work experience and love to build and learn new technologies. Click on a button below view my past expriences and projects!
+                </p>
+                <div class="btn-wrap-section">
+                    <a href="projects.html" class="project-btn">View Projects</a>
+                    <!-- <button class="project-btn" data-view-projects>View projects</button> -->
+                    <!-- <button class="resume-btn" data-view-resume>View resume</button> -->
+                    <a href="resume.html" class="resume-btn">View Resume</a>
+                </div>
+            </div>
+            <div class="right-side">
+                <img class="right-side-img" src="coding.png" alt="">
+            </div>
+        </main>
+    
+        <!-- footer section -->
+        <footer class="footer-section">
+            <div class="contact-section">
+                <h3 class="contact-title">Contact Me!</h3>
+                <form action="https://formspree.io/f/mdoyyjbv" method="POST">
+                    <div class="name-email-wrap">
+                        <label for="full-name">Full Name:
+                            <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+                        </label>
+                        <label>
+                            Your email:
+                            <input type="email" name="_replyto" placeholder="Email">
+                        </label>
+                    </div>
+                    <div class="textarea-wrap">
+                        <label>
+                            Message:
+                            <textarea name="message" placeholder="Type your message here..."></textarea>
+                        </label>
+                        <button type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+            <div class="footer-wrap">
+                <div class="footer-left">
+                    <p class="footer-title">Cameron's Portfolio &copy;</p>
+                </div>
+                <div class="right-side">
+                    <p class="powered-by-msg">Powered by: HTML, CSS, & JavaScript</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- icon scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

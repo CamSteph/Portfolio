@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cameron's Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div class="container" data-container>
+        <div class="overlay-section" data-overlay-section>
+            <ion-icon name="close" data-close-overlay></ion-icon>
+            <div class="overlay-list" data-dropdown-list>
+                <a href="index.html" class="overlay-link">Home</a>
+                <a href="projects.html" class="overlay-link">Projects</a>
+                <a href="resume.html" class="dropdown-link">Resume</a>
+                <div class="dark-mode-wrap" data-mode-wrap2>
+                    <ion-icon name="moon-outline" data-dark-mode2></ion-icon>
+                </div>
+            </div>
+        </div>
+        <!-- header section -->
+        <header class="header-section">
+            <div class="logo-section">
+                <img src="profile.png" alt="Logo">
+                <h2 class="logo-title">Cameron's Portfolio</h2>
+            </div>
+            <nav class="nav-section">
+                <ul class="nav-ul">
+                    <li class="nav-li"><a href="index.html">Home</a></li>
+                    <li class="nav-li"><a href="projects.html">Projects</a></li>
+                    <li class="nav-li"><a href="resume.html">Resume</a></li>
+                    <li class="nav-li">
+                        <div class="dark-mode-wrap" data-mode-wrap>
+                            <ion-icon name="moon-outline" data-dark-mode></ion-icon>
+                            Dark
+                        </div>
+                    </li>
+                </ul>
+                <div class="dropdown-section">
+                    <ion-icon name="grid-outline" data-dropdown-btn></ion-icon>
+                    <div class="dropdown-list" data-dropdown-list>
+                        <a href="index.html" class="dropdown-link">Home</a>
+                        <a href="projects.html" class="dropdown-link">Projects</a>
+                        <a href="resume.html" class="dropdown-link">Resume</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="project-card-section">
+            <h1 class="project-card-title">My Projects</h1>
+            <div class="cards-section">
+                <div class="card">
+                    <h3 class="card-title">Card Match Game</h3>
+                    <ion-icon name="game-controller-outline"></ion-icon>
+                    <p class="card-description">A card matching game made with HTML, CSS, and JavaScript.</p>
+                    <div class="card-btn-wrap">
+                        <button data-view-code-match>View Code</button>
+                        <button data-view-site-match>View Site</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Calculator Project</h3>
+                    <ion-icon name="calculator-outline"></ion-icon>
+                    <p class="card-description">A calculator application that demonstrates ES6 coding standards.</p>
+                    <div class="card-btn-wrap">
+                        <button data-view-code-calc>View Code</button>
+                        <button data-view-site-calc>View Site</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Weather API</h3>
+                    <ion-icon name="partly-sunny-outline"></ion-icon>
+                    <p class="card-description">This is an application that uses an open source API to request weather related data.</p>
+                    <div class="card-btn-wrap">
+                        <button data-view-code-api>View Code</button>
+                        <button data-view-site-api>View Site</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Quiz Application</h3>
+                    <ion-icon name="document-text-outline"></ion-icon>
+                    <p class="card-description">A 10 question quiz application on HTML, CSS, and JavaScript topics.</p>
+                    <div class="card-btn-wrap">
+                        <button data-view-code-quiz>View Code</button>
+                        <button data-view-site-quiz>View Site</button>
+                    </div>
+                </div>
+                <!-- <div class="card">
+                    <h3 class="card-title">Weather API</h3>
+                    <ion-icon name="partly-sunny-outline"></ion-icon>
+                    <p class="card-description">This is an application that uses an open source API to request weather related data.</p>
+                    <div class="card-btn-wrap">
+                        <button data-view-code-api>View Code</button>
+                        <button data-view-site-api>View Site</button>
+                    </div>
+                </div> -->
+                <div class="card">
+                    <h3 class="card-title">Form Validation</h3>
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <p class="card-description">A sign-up form that validates the user's entries upon submission.</p>
+                    <div class="card-btn-wrap">
+                        <button data-view-code-form>View Code</button>
+                        <button data-view-site-form>View Site</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- footer section -->
+        <footer class="footer-section">
+            <div class="contact-section">
+                <h3 class="contact-title">Contact Me!</h3>
+                <form action="https://formspree.io/f/mdoyyjbv" method="POST">
+                    <div class="name-email-wrap">
+                        <label for="full-name">Full Name:
+                            <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+                        </label>
+                        <label>
+                            Your email:
+                            <input type="email" name="_replyto" placeholder="Email">
+                        </label>
+                    </div>
+                    <div class="textarea-wrap">
+                        <label>
+                            Message:
+                            <textarea name="message" placeholder="Type your message here..."></textarea>
+                        </label>
+                        <button type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+            <div class="footer-wrap">
+                <div class="footer-left">
+                    <p class="footer-title">Cameron's Portfolio &copy;</p>
+                </div>
+                <div class="right-side">
+                    <p class="powered-by-msg">Powered by: HTML, CSS, & JavaScript</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    </div>
+
+    <!-- icon scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
