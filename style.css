@@ -6,20 +6,6 @@
           box-sizing: border-box;
 }
 
-@media not all and (min-resolution:.001dpcm)
-{ @supports (-webkit-appearance:none) {
-
-    .safari_only { 
-
-        
-
-    }
-  
-  .container .footer-section .contact-section form .textarea-wrap button{
-    background-color: red;
-  }
-}}
-
 body {
   margin: 0;
   padding: 0;
@@ -1581,6 +1567,9 @@ body {
     width: 19vw;
     min-width: 100px;
   }
+  .container .resume-section .key-skills-section {
+    margin-top: 10%;
+  }
   .container .resume-section .key-skills-section .key-skills {
     display: -ms-grid;
     display: grid;
@@ -1594,12 +1583,15 @@ body {
     place-items: center;
     width: 85%;
   }
+  .container .resume-section .work-experience-section {
+    margin-top: 10%;
+  }
   .container .footer-section .contact-section {
     background: #906ee0;
   }
-  
-  .container .footer-section .contact-section form .textarea-wrap button{
-    background-color: red;
+  .container .footer-section .contact-section form .textarea-wrap button {
+    background-color: white;
+    color: #16181a;
   }
 }
 /*# sourceMappingURL=style.css.map */
