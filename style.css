@@ -1568,7 +1568,8 @@ body {
     min-width: 100px;
   }
   .container .project-card-section {
-    min-height: 330vh;
+    min-height: 230vh;
+    margin-bottom: 25%;
   }
   .container .resume-section .key-skills-section {
     margin-top: 10%;
