@@ -130,10 +130,10 @@ view_site_match.onclick = () => {
     window.open('https://camsteph.github.io/Card-Match-Application/', '_blank');
 };
 view_code_calc.onclick = () => {
-    window.open('https://camsteph.github.io/Drop-Shop-Store/', '_blank');
+    window.open('https://github.com/CamSteph/Drop-Shop-Store/', '_blank');
 };
 view_site_calc.onclick = () => {
-    window.open('https://camsteph.github.io/Calculator-Application/', '_blank');
+    window.open('https://camsteph.github.io/Drop-Shop-Store/', '_blank');
 };
 view_code_quiz.onclick = () => {
     window.open('https://github.com/CamSteph/Quiz-Application', '_blank');
